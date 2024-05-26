@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/BookProject.csproj": {}
+    "/Users/jainishpathak/Desktop/TatvaSoft/Day-4/BookProject.csproj": {}
   },
   "projects": {
-    "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/BookProject.csproj": {
+    "/Users/jainishpathak/Desktop/TatvaSoft/Day-4/BookProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/BookProject.csproj",
+        "projectUniqueName": "/Users/jainishpathak/Desktop/TatvaSoft/Day-4/BookProject.csproj",
         "projectName": "BookProject",
-        "projectPath": "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/BookProject.csproj",
+        "projectPath": "/Users/jainishpathak/Desktop/TatvaSoft/Day-4/BookProject.csproj",
         "packagesPath": "/Users/jainishpathak/.nuget/packages/",
-        "outputPath": "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/obj/",
+        "outputPath": "/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jainishpathak/.nuget/NuGet/NuGet.Config"
@@ -44,6 +44,10 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.5, )"
             },

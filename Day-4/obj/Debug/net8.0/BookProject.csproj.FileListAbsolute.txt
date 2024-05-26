@@ -32,3 +32,14 @@
 /Users/jainishpathak/Desktop/TatvaSoft/BookProject/obj/Debug/net8.0/BookProject.pdb
 /Users/jainishpathak/Desktop/TatvaSoft/BookProject/obj/Debug/net8.0/BookProject.genruntimeconfig.cache
 /Users/jainishpathak/Desktop/TatvaSoft/BookProject/obj/Debug/net8.0/ref/BookProject.dll
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.csproj.AssemblyReference.cache
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.AssemblyInfoInputs.cache
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.AssemblyInfo.cs
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.csproj.CoreCompileInputs.cache
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.MvcApplicationPartsAssemblyInfo.cs
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.MvcApplicationPartsAssemblyInfo.cache
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.sourcelink.json
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.dll
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/refint/BookProject.dll
+/Users/jainishpathak/Desktop/TatvaSoft/Day-4/obj/Debug/net8.0/BookProject.pdb
