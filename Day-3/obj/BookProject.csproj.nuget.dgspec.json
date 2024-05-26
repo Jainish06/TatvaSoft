@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/BookProject.csproj": {}
+    "/Users/jainishpathak/Desktop/TatvaSoft/Day-3/BookProject.csproj": {}
   },
   "projects": {
-    "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/BookProject.csproj": {
+    "/Users/jainishpathak/Desktop/TatvaSoft/Day-3/BookProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/BookProject.csproj",
+        "projectUniqueName": "/Users/jainishpathak/Desktop/TatvaSoft/Day-3/BookProject.csproj",
         "projectName": "BookProject",
-        "projectPath": "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/BookProject.csproj",
+        "projectPath": "/Users/jainishpathak/Desktop/TatvaSoft/Day-3/BookProject.csproj",
         "packagesPath": "/Users/jainishpathak/.nuget/packages/",
-        "outputPath": "/Users/jainishpathak/Desktop/TatvaSoft/BookProject/obj/",
+        "outputPath": "/Users/jainishpathak/Desktop/TatvaSoft/Day-3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jainishpathak/.nuget/NuGet/NuGet.Config"
@@ -46,6 +46,14 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
