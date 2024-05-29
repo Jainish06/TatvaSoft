@@ -49,7 +49,7 @@ namespace BookProject.Controllers
         [HttpGet("ordered-by-username")]
         public ActionResult<List<User>> GetUsersOrderedByUsername()
         {
-            return _userRepository.GetUsersOrderedByUsername();
+            return _userRepository.GetUsersOrderedByUserName();
         }
 
         [HttpGet("grouped-by-role")]

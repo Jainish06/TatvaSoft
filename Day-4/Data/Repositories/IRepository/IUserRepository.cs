@@ -8,8 +8,8 @@ namespace BookProject.Data.Repositories.IRepository
         List<User> GetAllUsersFromDatabase();
         User GetUserById(int id);
         void AddUser(User user);
-        List<User> GetUsersOrderedByUsername();
+        List<User> GetUsersOrderedByUserName();
         List<IGrouping<string, User>> GetUsersGroupedByRole();
-        List<dynamic> GetUsersWithRoles();
+        List<UserRoleDto> GetUsersWithRoles();
     }
 }

@@ -16,18 +16,23 @@ namespace BookProject.Data.Repositories
         public List<User> GetAllUsersInMemory()
         {
             var users = _context.Users.ToList(); // Load data into memory
-            return users.Where(u => u.Username.Contains("admin")).ToList(); // Filter in memory
+            return users.Where(u => u.UserName.Contains("admin")).ToList(); // Filter in memory
         }
 
         public List<User> GetAllUsersFromDatabase()
         {
-            var usersQuery = _context.Users.Where(u => u.Username.Contains("admin")); // Create query
+            var usersQuery = _context.Users.Where(u => u.UserName.Contains("admin")); // Create query
             return usersQuery.ToList(); // Execute query on the database
         }
 
         public User GetUserById(int id)
         {
             return _context.Users.SingleOrDefault(u => u.UserId == id);
+        }
+
+        public Role GetRoleById(int id)
+        {
+            return _context.Roles.SingleOrDefault(u => u.RoleId == id);
         }
 
         public void AddUser(User user)
@@ -37,9 +42,9 @@ namespace BookProject.Data.Repositories
         }
 
         // New Methods
-        public List<User> GetUsersOrderedByUsername()
+        public List<User> GetUsersOrderedByUserName()
         {
-            return _context.Users.OrderBy(u => u.Username).ToList();
+            return _context.Users.OrderBy(u => u.UserName).ToList();
         }
 
         public List<IGrouping<string, User>> GetUsersGroupedByRole()
@@ -49,12 +54,12 @@ namespace BookProject.Data.Repositories
 
         public List<UserRoleDto> GetUsersWithRoles()
         {
-            var usersWithRoles = from user in _context.Users
+            var usersWithRoles = from user in _context.Users  
                                  join role in _context.Roles
                                  on user.RoleId equals role.RoleId
                                  select new UserRoleDto
                                  {
-                                     Username = user.Username,
+                                     UserName = user.UserName,
                                      RoleName = role.RoleName
                                  };
             return usersWithRoles.ToList();
