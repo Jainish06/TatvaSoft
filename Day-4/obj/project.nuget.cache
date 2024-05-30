@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "i4ZAOHIhnKs=",
+  "dgSpecHash": "fD9dOuffUjs=",
   "success": true,
   "projectFilePath": "/Users/jainishpathak/Desktop/TatvaSoft/Day-4/BookProject.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,10 @@
     "/Users/jainishpathak/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/jainishpathak/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
     "/Users/jainishpathak/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/jainishpathak/.nuget/packages/microsoft.identitymodel.abstractions/7.6.0/microsoft.identitymodel.abstractions.7.6.0.nupkg.sha512",
+    "/Users/jainishpathak/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.6.0/microsoft.identitymodel.jsonwebtokens.7.6.0.nupkg.sha512",
+    "/Users/jainishpathak/.nuget/packages/microsoft.identitymodel.logging/7.6.0/microsoft.identitymodel.logging.7.6.0.nupkg.sha512",
+    "/Users/jainishpathak/.nuget/packages/microsoft.identitymodel.tokens/7.6.0/microsoft.identitymodel.tokens.7.6.0.nupkg.sha512",
     "/Users/jainishpathak/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
     "/Users/jainishpathak/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/jainishpathak/.nuget/packages/npgsql/8.0.3/npgsql.8.0.3.nupkg.sha512",
