@@ -3023,33 +3023,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pci17\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/jainishpathak/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Day3_IntroductiontoDotNET\\BookProject\\BookProject\\BookProject.csproj",
+      "projectUniqueName": "/Users/jainishpathak/Desktop/TatvaSoft/Day-5/BookProject/BookProject.csproj",
       "projectName": "BookProject",
-      "projectPath": "D:\\Day3_IntroductiontoDotNET\\BookProject\\BookProject\\BookProject.csproj",
-      "packagesPath": "C:\\Users\\pci17\\.nuget\\packages\\",
-      "outputPath": "D:\\Day3_IntroductiontoDotNET\\BookProject\\BookProject\\obj\\",
+      "projectPath": "/Users/jainishpathak/Desktop/TatvaSoft/Day-5/BookProject/BookProject.csproj",
+      "packagesPath": "/Users/jainishpathak/.nuget/packages/",
+      "outputPath": "/Users/jainishpathak/Desktop/TatvaSoft/Day-5/BookProject/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\pci17\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/jainishpathak/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3062,6 +3053,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3124,7 +3120,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
