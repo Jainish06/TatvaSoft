@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import { AdminsideServiceService } from 'src/app/service/adminside-service.service';
-declare var window:any;
+declare var window: any;
 @Component({
   selector: 'app-missiontheme',
   templateUrl: './missiontheme.component.html',
@@ -14,7 +14,7 @@ export class MissionthemeComponent implements OnInit {
   itemsPerPages: number = 10;
   searchText: any;
   themeId: any;
-  deleteThemeModal:any;
+  deleteThemeModal: any;
   constructor(
     private service: AdminsideServiceService,
     private router: Router,
@@ -39,18 +39,24 @@ export class MissionthemeComponent implements OnInit {
       (err) => this.toast.error({ summary: err.message, duration: 3000 })
     );
   }
-  OpenRemoveMissionThemeModal(id:any){
-    this.deleteThemeModal.show();
+
+  OpenRemoveMissionThemeModal(id: any) {
     this.themeId = id;
+    this.deleteThemeModal.show();
   }
-  CloseRemoveMissionThemeModal(){
+
+  CloseRemoveMissionThemeModal() {
     this.deleteThemeModal.hide();
   }
   DeleteMissionTheme() {
     this.service.DeleteMissionTheme(this.themeId).subscribe(
       (data: any) => {
         if (data.result == 1) {
-          this.toast.success({detail: 'SUCCESS',summary: data.data,duration: 3000});
+          this.toast.success({
+            detail: 'SUCCESS',
+            summary: data.data,
+            duration: 3000,
+          });
           this.CloseRemoveMissionThemeModal();
           setTimeout(() => {
             this.router.navigate(['admin/missionTheme']);

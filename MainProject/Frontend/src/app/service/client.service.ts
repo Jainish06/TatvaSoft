@@ -4,18 +4,15 @@ import { Observable } from 'rxjs';
 import { City, Country, Mission } from '../model/cms.model';
 import { MissionApplication } from '../model/missionApplication.model';
 import { user, UserDetail } from '../model/user.model';
-import {
-  VolunteeringGoals,
-  VolunteeringHours,
-} from '../model/volunteering.model';
+import { VolunteeringGoals, VolunteeringHours } from '../model/volunteering.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ClientService {
   constructor(private http: HttpClient) {}
-  apiUrl: string = 'http://localhost:5140/api';
-  imageUrl: string = 'http://localhost:5140';
+  apiUrl: string = 'https://localhost:44332/api';
+  imageUrl: string = 'https://localhost:44332';
 
   //HomePage
   MissionList(userId: any): Observable<Mission[]> {

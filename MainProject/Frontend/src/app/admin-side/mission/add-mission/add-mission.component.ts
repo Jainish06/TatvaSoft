@@ -42,8 +42,8 @@ export class AddMissionComponent implements OnInit {
 
   addMissionFormValid() {
     this.addMissionForm = this.fb.group({
-      countryId: [null, Validators.compose([Validators.required])],
-      cityId: [null, Validators.compose([Validators.required])],
+      countryId: [null, Validators.required],
+      cityId: [null, Validators.required],
       missionTitle: [null, Validators.compose([Validators.required])],
       missionDescription: [null, Validators.compose([Validators.required])],
       startDate: [null, Validators.compose([Validators.required])],
@@ -78,24 +78,36 @@ export class AddMissionComponent implements OnInit {
   }
 
   CountryList() {
-    this.service.CountryList().subscribe((data: any) => {
-      if (data.result == 1) {
-        this.countryList = data.data;
-      } else {
-        this.toast.error({ detail: "ERROR", summary: data.message, duration: 3000 });
+    this.service.CountryList().subscribe(
+      (response: any) => {
+        if (response.status === "Success") {
+          this.countryList = response.data;
+        } else {
+          this.toast.error({ detail: "ERROR", summary: 'Failed to fetch country list', duration: 3000 });
+        }
+      },
+      error => {
+        console.error('Error fetching country list', error);
+        this.toast.error({ detail: "ERROR", summary: 'Failed to fetch country list', duration: 3000 });
       }
-    });
+    );
   }
 
-  CityList(countryId: any) {
-    countryId = countryId.target.value;
-    this.service.CityList(countryId).subscribe((data: any) => {
-      if (data.result == 1) {
-        this.cityList = data.data;
-      } else {
-        this.toast.error({ detail: "ERROR", summary: data.message, duration: 3000 });
+  CityList(event: any) {
+    const countryId = event.target.value;
+    this.service.CityList(countryId).subscribe(
+      (response: any) => {
+        if (response.status === "Success") {
+          this.cityList = response.data;
+        } else {
+          this.toast.error({ detail: "ERROR", summary: 'Failed to fetch city list', duration: 3000 });
+        }
+      },
+      error => {
+        console.error('Error fetching city list', error);
+        this.toast.error({ detail: "ERROR", summary: 'Failed to fetch city list', duration: 3000 });
       }
-    });
+    );
   }
 
   GetMissionSkillList() {

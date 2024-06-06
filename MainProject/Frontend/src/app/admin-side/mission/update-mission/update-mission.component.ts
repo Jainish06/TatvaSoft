@@ -39,8 +39,8 @@ export class UpdateMissionComponent implements OnInit {
           id: [''],
           missionTitle: ['', Validators.compose([Validators.required])],
           missionDescription: ['', Validators.compose([Validators.required])],
-          countryId: ['', Validators.compose([Validators.required])],
-          cityId: ['', Validators.compose([Validators.required])],
+          countryId: ['', Validators.required],
+          cityId: ['', Validators.required],
           startDate: ['', Validators.compose([Validators.required])],
           endDate: ['', Validators.compose([Validators.required])],
           totalSheets: [''],
@@ -60,30 +60,37 @@ export class UpdateMissionComponent implements OnInit {
     this.missionDocText = '';
   }
 
-  CountryList(){
-    this.service.CountryList().subscribe((data:any)=>{
-      if(data.result == 1)
-      {
-          this.countryList = data.data;
+  CountryList() {
+    this.service.CountryList().subscribe(
+      (response: any) => {
+        if (response.status === "Success") {
+          this.countryList = response.data;
+        } else {
+          this.toast.error({ detail: "ERROR", summary: 'Failed to fetch country list', duration: 3000 });
+        }
+      },
+      error => {
+        console.error('Error fetching country list', error);
+        this.toast.error({ detail: "ERROR", summary: 'Failed to fetch country list', duration: 3000 });
       }
-      else
-      {
-          this.toast.error({detail:"ERROR",summary:data.message,duration:3000});
-      }
-    });
+    );
   }
-    CityList(countryId:any){
-      countryId = countryId.target.value;
-      this.service.CityList(countryId).subscribe((data:any)=>{
-      if(data.result == 1)
-      {
-          this.cityList = data.data;
+
+  CityList(event: any) {
+    const countryId = event.target.value;
+    this.service.CityList(countryId).subscribe(
+      (response: any) => {
+        if (response.status === "Success") {
+          this.cityList = response.data;
+        } else {
+          this.toast.error({ detail: "ERROR", summary: 'Failed to fetch city list', duration: 3000 });
+        }
+      },
+      error => {
+        console.error('Error fetching city list', error);
+        this.toast.error({ detail: "ERROR", summary: 'Failed to fetch city list', duration: 3000 });
       }
-      else
-      {
-          this.toast.error({detail:"ERROR",summary:data.message,duration:3000});
-      }
-    });
+    );
   }
   HideOrShow(e:any)
   {

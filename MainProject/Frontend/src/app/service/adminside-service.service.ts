@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHandler, HttpHeaders,HttpErrorResponse } from '@angular/common/http';
 import { City, CMS, Country, Mission } from '../model/cms.model';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { MissionApplication } from '../model/missionApplication.model';
 import { MissionTheme } from '../model/missionTheme.model';
 import { MissionSkill } from '../model/missionSkill.model';
+import { catchError } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -17,8 +19,8 @@ export class AdminsideServiceService {
     public router: Router
   ) {}
   // apiUrl:string='http://localhost:63943/api';
-  apiUrl: string = 'http://localhost:5140/api';
-  imageUrl: string = 'http://localhost:5140';
+  apiUrl: string = 'https://localhost:44332/api';
+  imageUrl: string = 'https://localhost:44332';
 
   //User
   UserList(): Observable<any[]> {
@@ -74,12 +76,24 @@ export class AdminsideServiceService {
       `${this.apiUrl}/Mission/MissionDetailById/${id}`
     );
   }
-  CountryList(): Observable<Country[]> {
-    return this.http.get<Country[]>(`${this.apiUrl}/Common/CountryList`);
+  CountryList(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/Common/CountryList`)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
-  CityList(countryId: any): Observable<City[]> {
-    return this.http.get<City[]>(`${this.apiUrl}/Common/CityList/${countryId}`);
+  CityList(countryId: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/Common/CityList/${countryId}`)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
+
+  private handleError(error: HttpErrorResponse) {
+    console.error('Server Error:', error);
+    return throwError('There was a problem with the request.');
+  }
+
   AddMission(data: Mission) {
     return this.http.post(`${this.apiUrl}/Mission/AddMission`, data);
   }
